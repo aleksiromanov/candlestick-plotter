@@ -1,6 +1,6 @@
 # candlestick-plotter
 
-## Development.
+## Development
 
 Transpile the source and make the package available for import
 
@@ -20,7 +20,7 @@ Cleanup the working directories
 make clean
 ```
 
-## Usage (nodejs):
+## Usage (nodejs)
 
 Install packages:
 
@@ -66,6 +66,6 @@ $ babel index.js | node
 View the charts (requires the *feh* image viewer installed):
 
 ```
-$ feh  --fullscreen --draw-actions --slideshow-delay 0.1 --cycle-once -bg-scale converted/*.png
+$ feh  --fullscreen --draw-actions --slideshow-delay 0.1 --cycle-once -bg-scale *.png
 ```
 
