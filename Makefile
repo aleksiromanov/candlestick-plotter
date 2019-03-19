@@ -13,8 +13,10 @@ all: install run convert
 install :
 	npx babel $(SRC_FOLDER) --out-dir $(DIST_FOLDER)
 
+.PHONY: test
 test :
-	nodejs test/index.js
+	npm install git+https://git@github.com/aleksiromanov/candlestick-plotter.git
+	babel test/index.js | node
 
 convert :
 	for i in result-*-*.png; do convert $${i} -background $(BACKGROUND_COLOR) -flatten $(OUTPUT_FOLDER)/$${i}; done
