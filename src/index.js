@@ -9,7 +9,7 @@ const LABLEL_FOR_BUY               = 'B';
 const LABLEL_FOR_SELL              = 'S';
 const LABLEL_FOR_HOLD              = 'H';
 
-class TicksPlotter {
+export default class {
 
     analyse_input (input) {
         var n = input.high.length;
@@ -64,4 +64,5 @@ class TicksPlotter {
             .on('end', () => this.plot_ticks(ticks));
     }
 }
+
 
