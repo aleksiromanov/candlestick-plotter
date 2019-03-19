@@ -1,0 +1,27 @@
+{
+  "name": "candlestick-plotter",
+  "version": "1.0.0",
+  "description": "A candlestick-plotter written in javascript",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksiromanov/candlestick-plotter.git"
+  },
+  "author": "Aleksi Romanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksiromanov/candlestick-plotter/issues"
+  },
+  "homepage": "https://github.com/aleksiromanov/candlestick-plotter#readme",
+  "dependencies": {
+    "csv-parse": "^4.3.4",
+    "draw-candlestick": "^2.0.3",
+    "fs": "0.0.1-security"
+  }
+}
