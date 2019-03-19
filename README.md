@@ -1,6 +1,6 @@
 # candlestick-plotter
 
-## Development.
+## Development
 
 Transpile the source and make the package available for import
 
@@ -20,7 +20,7 @@ Cleanup the working directories
 make clean
 ```
 
-## Usage (nodejs):
+## Usage (nodejs)
 
 Install packages:
 
@@ -29,8 +29,7 @@ mkdir test
 cd test
 npm init --yes
 npm install -S git+https://git@github.com/aleksiromanov/candlestick-plotter.git
-npm install --save-dev @babel/preset-env
-npm install --save-dev babel-cli
+npm install --save-dev babel-cli babel-preset-es2015
 ```
 
 Write the source, e.g.:
@@ -60,12 +59,12 @@ $ head ohlc.csv
 Transpile the code on the fly and run to generate candlestick OHLC charts (requires the *babel-cli* javascript transpiler):
 
 ```
-$ babel index.js | node
+$ node_modules/.bin/babel --presets es2015 index.js | node
 ```
 
 View the charts (requires the *feh* image viewer installed):
 
 ```
-$ feh  --fullscreen --draw-actions --slideshow-delay 0.1 --cycle-once -bg-scale converted/*.png
+$ feh  --fullscreen --draw-actions --slideshow-delay 0.1 --cycle-once -bg-scale *.png
 ```
 
