@@ -29,8 +29,7 @@ mkdir test
 cd test
 npm init --yes
 npm install -S git+https://git@github.com/aleksiromanov/candlestick-plotter.git
-npm install --save-dev @babel/preset-env
-npm install --save-dev babel-cli
+npm install --save-dev babel-cli babel-preset-es2015
 ```
 
 Write the source, e.g.:
@@ -60,7 +59,7 @@ $ head ohlc.csv
 Transpile the code on the fly and run to generate candlestick OHLC charts (requires the *babel-cli* javascript transpiler):
 
 ```
-$ babel index.js | node
+$ node_modules/.bin/babel --presets es2015 index.js | node
 ```
 
 View the charts (requires the *feh* image viewer installed):
