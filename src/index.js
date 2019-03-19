@@ -4,7 +4,6 @@ import CSV from 'csv-parse';
 
 const NUBER_OF_CANDLES_PER_PICTURE = 12;
 const BUY_SELL_TRESHOLD            = 0.00007;
-const SCV_FILE_PATH                = 'DAT_ASCII_EURUSD_M1_201902-100.csv';
 const LABLEL_FOR_BUY               = 'B';
 const LABLEL_FOR_SELL              = 'S';
 const LABLEL_FOR_HOLD              = 'H';
@@ -56,9 +55,9 @@ export default class {
         this.plot_input(input);
     }
 
-    run() {
+    run(csvFilePath) {
         let ticks = [];
-        FS  .createReadStream(SCV_FILE_PATH)
+        FS  .createReadStream(csvFilePath)
             .pipe(CSV({'delimiter':';'}))
             .on('data', (tick) => ticks.push(tick))
             .on('end', () => this.plot_ticks(ticks));
